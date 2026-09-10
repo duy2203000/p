@@ -1,0 +1,16 @@
+plugins { id 'com.android.application' version '8.9.2' apply false }
+
+// Independent measurement tests, no Android device required.
+tasks.register('compileEngineTest', JavaCompile) {
+    source = files('app/src/main/java/vn/gps/doduong/TripEngine.java', 'tests/TripEngineTest.java')
+    classpath = files()
+    destinationDirectory = layout.buildDirectory.dir('engine-test')
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+    options.encoding = 'UTF-8'
+}
+tasks.register('engineTest', JavaExec) {
+    dependsOn 'compileEngineTest'
+    classpath = files(layout.buildDirectory.dir('engine-test'))
+    mainClass = 'TripEngineTest'
+}

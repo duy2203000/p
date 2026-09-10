@@ -1,0 +1,8 @@
+KET QUA KIEM TRA BAN MA NGUON 1.0
+
+PASS: 27 assertions trong TripEngineTest (Java 17).
+PASS: 4 tep Java duoc parse cu phap bang Java Compiler API.
+PASS: AndroidManifest va cac XML tai nguyen hop le ve cu phap XML.
+
+CHUA CHAY: Android SDK build, Gradle workflow, PowerShell build, Android emulator, dien thoai that.
+KHONG CO APK bien dich san trong goi nay.
